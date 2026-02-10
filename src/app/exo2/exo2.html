@@ -1,0 +1,27 @@
+<div class="photo-container">
+    <img [src]="UrlPhoto" alt="photo de {{NomComplet}}" id="image">
+    <br>
+    <input type="text" [(ngModel)]="UrlPhoto">
+</div>
+<br>
+<div>
+    <label for="NomComplet">Nom complet : {{NomComplet}}</label>
+    <br>
+    <input type="text" [(ngModel)]="NomComplet" placeholder="NomComplet">
+
+    <label for="Email">Email : {{Email}}</label>
+    <br>
+    <input type="text" [(ngModel)]="Email" placeholder="Email">
+
+    <label for="DateNaissance">DateNaissance : {{DateNaissance}}</label>
+    <br>
+    <input type="text" [(ngModel)]="DateNaissance" placeholder="DateDeNaissance">
+
+    <label for="Genre">Genre : {{Genre}}</label>
+    <br>
+    <input type="text" [(ngModel)]="Genre" placeholder="Genre">
+
+    <label for="Langues">Langues : {{Langues}}</label>
+    <br>
+    <input type="text" [(ngModel)]="Langues" placeholder="Langues">
+</div>
