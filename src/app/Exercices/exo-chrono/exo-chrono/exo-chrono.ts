@@ -1,9 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-exo-chrono',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './exo-chrono.html',
   styleUrl: './exo-chrono.css',
 })

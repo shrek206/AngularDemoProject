@@ -1,12 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Exo1 } from "./exo1/exo1";
-import { Exo2 } from "./exo2/exo2";
-import { ExoChrono } from "./exo-chrono/exo-chrono";
+import { Navbar } from "./navbar/navbar";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Exo1, Exo2, ExoChrono],
+  imports: [RouterOutlet, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
