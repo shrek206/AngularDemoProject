@@ -1,0 +1,13 @@
+<h1>Entrez une température</h1>
+
+<input type="number" [(ngModel)] = "result">
+<select [(ngModel)] = "source">
+<option value="celsius">celsius</option>
+<option value="fahrenheit">fahrenheit</option>
+</select>
+<select [(ngModel)] = "dest">
+<option value="fahrenheit">fahrenheit</option>
+<option value="celsius">celsius</option>
+</select>
+<br>
+<p>conversion : {{result | convertTemp : source : dest}}</p>
