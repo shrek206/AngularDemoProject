@@ -11,7 +11,7 @@ export class ConvertTempPipe implements PipeTransform {
     };
     if(source === 'fahrenheit' && dest === 'celsius')
     {
-      return (value - 32) * 5/9;
+      return (value - 32) * (5/9);
     }
     if (source === 'celsius' && dest === 'fahrenheit'){
       return (value * 9/5) + 32;
@@ -20,5 +20,4 @@ export class ConvertTempPipe implements PipeTransform {
       return value;
     }
   }
-
 }

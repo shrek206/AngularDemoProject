@@ -12,6 +12,4 @@ export class Exo6 {
 result:number = 0;
 source: 'celsius' | 'fahrenheit' = "celsius";
 dest: 'celsius' | 'fahrenheit' = "fahrenheit";
-
-
 }

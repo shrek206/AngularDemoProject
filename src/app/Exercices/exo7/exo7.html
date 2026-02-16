@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <h1 class="text-center text-white mb-5">🛒 Gestion des Produits</h1>
+  
+  <div class="row">
+    <div class="col-md-5">
+      <app-add-product 
+        (objectEmittedSignal)="objectFromChild.push($event)"/>
+    </div>
+    <div class="col-md-7">
+      <app-list-product
+        [objectFromParentSignal]="objectFromChild"/>  
+    </div>
+  </div>
+</div>

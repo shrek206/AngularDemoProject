@@ -1,13 +1,40 @@
-<h1>Entrez une température</h1>
+<div class="converter-container">
+  <h1>🌡️ Convertisseur de Température</h1>
 
-<input type="number" [(ngModel)] = "result">
-<select [(ngModel)] = "source">
-<option value="celsius">celsius</option>
-<option value="fahrenheit">fahrenheit</option>
-</select>
-<select [(ngModel)] = "dest">
-<option value="fahrenheit">fahrenheit</option>
-<option value="celsius">celsius</option>
-</select>
-<br>
-<p>conversion : {{result | convertTemp : source : dest}}</p>
+  <div class="form-group">
+    <label for="temperature">Température</label>
+    <input 
+      type="number" 
+      id="temperature"
+      class="form-control" 
+      [(ngModel)]="result" 
+      placeholder="Entrez une valeur">
+  </div>
+
+  <div class="form-group">
+    <label for="source">De</label>
+    <select id="source" class="form-select" [(ngModel)]="source">
+      <option value="celsius">Celsius (°C)</option>
+      <option value="fahrenheit">Fahrenheit (°F)</option>
+    </select>
+  </div>
+
+  <div class="arrow-container">
+    ↓
+  </div>
+
+  <div class="form-group">
+    <label for="dest">Vers</label>
+    <select id="dest" class="form-select" [(ngModel)]="dest">
+      <option value="fahrenheit">Fahrenheit (°F)</option>
+      <option value="celsius">Celsius (°C)</option>
+    </select>
+  </div>
+
+  <div class="result-box">
+    <p>Résultat de la conversion</p>
+    <div class="result-value">
+      {{result | convertTemp : source : dest}}
+    </div>
+  </div>
+</div>
