@@ -11,13 +11,15 @@ import { Product } from '../../../shared/models/products';
 export class AddProduct {
   nomProduct = signal("");
   prixProduct = signal<number>(0);
+  idproducts = signal<number>(0);
 
   objectEmittedSignal: OutputEmitterRef<Product> = output();
 
   sendToParent() {
     const newProducts: Product = {
       Name: this.nomProduct(),
-      price: this.prixProduct()
+      price: this.prixProduct(),
+      id: this.idproducts()
     }
 
     this.objectEmittedSignal.emit(newProducts)

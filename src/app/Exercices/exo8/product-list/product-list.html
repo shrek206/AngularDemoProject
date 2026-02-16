@@ -1,0 +1,14 @@
+<div class="card border-0 h-100">
+  <div class="card-body">
+    <h3>📦 Liste des produits</h3>
+    <ul>
+      @for (product of objectFromParentSignals(); track $index) {
+        <li>
+          <span>{{product.Name}}</span>
+          <span>{{product.price | currency : 'EUR' : 'symbol' : '1.2-2'}}</span>
+          <span>{{product.id}}</span>
+        </li>
+      }
+    </ul>
+  </div>
+</div>
