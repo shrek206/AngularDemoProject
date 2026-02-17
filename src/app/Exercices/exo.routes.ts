@@ -1,6 +1,5 @@
 import { Routes } from "@angular/router";
 import { exo } from "./exo";
-import { Exo8 } from "./exo8/exo8";
 
 export const routes: Routes = [
     { path: '', component: exo },
@@ -42,5 +41,9 @@ export const routes: Routes = [
     {
         path: 'exo8',
         loadComponent: () => import("./exo8/exo8").then(e => e.Exo8)
+    },
+    {
+        path: 'exo9',
+        loadComponent: () => import("./exo9/exo9").then(e => e.Exo9)
     }
 ]

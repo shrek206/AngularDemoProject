@@ -1,0 +1,24 @@
+<form [formGroup]="ageForm">
+    <div class="mb-3">
+        <label for="ageInput">Entrez votre date de naissance:</label>
+        <input type="date" formControlName="age" id="ageInput" class="form-control w-25">
+        
+        <!-- Afficher l'erreur "Minor" -->
+        @if (ageForm.get("age")?.hasError("Minor") && ageForm.get("age")?.touched) {
+            <div class="text-danger mt-2">
+                ⚠️ Tu es mineur !
+            </div>
+        }
+        
+        <!-- Afficher l'erreur "required" -->
+        @if (ageForm.get("age")?.hasError("required") && ageForm.get("age")?.touched) {
+            <div class="text-danger mt-2">
+                La date de naissance est requise
+            </div>
+        }
+    </div>
+    
+    <button (click)="onSubmite()"  type="submit" class="btn btn-primary" [disabled]="ageForm.invalid">
+        Valider
+    </button>
+</form>
